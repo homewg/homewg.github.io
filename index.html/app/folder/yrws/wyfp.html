@@ -1,0 +1,888 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0; list-style: none;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/img矩形-2@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0 0 0.2rem;
+	}
+	header span{
+		font-size: 0.35rem;
+		color: #fff;
+		position: absolute;
+		left: 3.09rem;
+		top: 0.20rem;
+	}
+	header img:last-child{
+		width: 0.35rem;
+		height: 0.35rem;
+		float: right;
+		margin: 0.25rem 0.2rem 0 0.2rem;
+	}
+	nav{
+		width: 7.5rem;
+		height: 0.64rem;
+		background-color: #fff;
+		overflow: hidden;
+	}
+	nav h1{
+		float: left;
+		width: 1.48rem;
+		height: 0.64rem;
+		font-size: 0.24rem;
+		text-align: center;
+		line-height: 0.64rem;
+	}
+	nav div{
+		float: left;
+		width: 0.02rem;
+		height: 0.5rem;
+		margin-top: 0.07rem;
+		background-color: rgb(240,239,237);
+	}
+	#tit .active{
+		color: rgb(248,195,210);
+	}
+	#content{
+		width: 40rem;
+	}
+	#content ol{
+		float: left;
+		overflow: hidden;
+		display: none;
+	}
+	#content .show{
+		display: block;
+		background-color: rgb(240,239,237);
+	}
+	.cons{
+		margin-top: 0.13rem;
+		width: 7.49rem;
+		background-color: #fff;
+		position: relative;
+	}
+	.cons::after{
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+	.head_msg{
+		overflow: hidden;
+		width: 1.68rem;
+		float: left;
+	}
+	.head_portrait{
+		float: left;
+		width: 1.3rem;
+		height: 1.3rem;
+		margin: 0.25rem 0rem 0rem 0.22rem;
+		background-color: #ccc;
+		-webkit-mask-position: 0 0;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: radial-gradient(circle at center center),rgba(0,0,0,1)97%,rgba(0,0,0,1)97%;
+		background: url(images/imgtimg@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.head_msg p{
+		float: left;
+		margin-top: 0.4rem;
+		margin-left: 0.26rem;
+	}
+	.head_msg p img{
+		width: 0.12rem;
+		height: 0.17rem;
+	}
+	.head_msg p span{
+		letter-spacing: 0.02rem;
+		font-size: 0.24rem;
+		color: #000;
+		margin-left: 0.05rem;
+		height: 0.17rem;
+	}
+	.con_msg{
+		width: 3.5rem;
+		float: left;
+	}
+	.con_msg div{
+		font-size: 0.3rem;
+		margin: 0.20rem 0 0.12rem 0.2rem;
+		color: rgb(84,84,84);
+	}
+	.con_msg span{
+		margin-top: 0.17rem;
+		font-size: 0.18rem;
+		display:inline-block;
+		padding-left: 0.22rem;
+		background: url(images/img椭圆-4@2x.png) 0rem 0.1rem no-repeat;
+	}
+	.con_msg time{
+		font-size: 0.18rem;
+	}
+	.foot_msg{
+		position: absolute;
+		top: 2.0rem;
+		right: 0.2rem;
+	}
+	.foot_msg span{
+		display: block;
+		text-align: center;
+		font-size: 0.24rem;
+	}
+	.footer{
+		float: left;
+		width: 7.09rem;
+		border-top: 0.02rem solid rgb(240,239,237);
+		margin-left: 0.2rem;
+		margin-top: 0.14rem;
+		overflow: hidden;
+		font-size: 0.18rem;
+	}
+	.footer_l{
+		float: left;
+		margin-top: 0.14rem;
+		padding-bottom: 0.2rem;
+	}
+	.footer_r{
+		margin-top: 0.14rem;
+		float: right;
+		margin-left: 0.14rem;
+	}
+	.grade{
+		position: absolute;
+		top: -0.01rem;
+		right: 0.42rem;
+		width: 0.43rem;
+		height: 0.79rem;
+		background: url(images/img多边形@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.grade span{
+		display: block;
+		margin-top: 0.2rem;
+		font-size: 0.28rem;
+		color: #fff;
+	}
+	#list{
+		position: absolute;
+		right: 0.12rem;
+		top: 0.82rem;
+		width: 1.5rem;
+		height: 1.6rem;
+		background: url(images/img矢量智能对象1@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		display: none;
+	}
+	#list .place{
+		height: 0.2rem;
+	}
+	#list a{
+		margin-top: 0.15rem;
+		margin-bottom: 0.15rem;
+		display: block;
+		text-align: center;
+		font-size: 0.24rem;
+		color: #fff;
+		text-decoration: none;
+	}
+	#line{
+		margin: 0 auto;
+		background-color: rgb(240,239,237);
+		width: 1.3rem;
+		height: 0.01rem;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header id="nav_head">
+		<img src="images/btn形状-2-拷贝@2x.png" alt="定位图片">
+		<span>我的发拼</span>
+		<img id="add" src="images/btn矩形-3-拷贝@2x.png" alt="定位图片">
+		<!-- <div id="add" style="background:url(images/btn矩形-3-拷贝@2x.png)0 0 no-repeat"></div> -->
+	</header>
+	<nav id='tit'>
+		<h1 class="active">拼今天</h1>
+		<div></div>
+		<h1>拼周末</h1>
+		<div></div>
+		<h1>拼好吃</h1>
+		<div></div>
+		<h1>拼旅游</h1>
+		<div></div>
+		<h1>拼电影</h1>
+	</nav>
+	<div id="content">
+		<ol class="show">
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+		</ol>
+		<ol>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+		</ol>
+		<ol>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>今天</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+		</ol>
+		<ol>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+		</ol>
+		<ol>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+			<li class="cons">
+				<div class="head_msg">
+					<div class="head_portrait"></div>
+					<p><img src="images/img♂@2x.png" alt="性别标志"><span>三生三世</span></p>
+				</div>
+				<div class="con_msg">
+					<div>看一场电影</div>
+					<span>加勒比海盗</span>
+					<span>保利国际影城&nbsp;&nbsp;20km</span>
+					<span><time>2017-06-06</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<time>18:00</time>&nbsp;&nbsp;&nbsp;&nbsp;AA</span>
+				</div>
+				<div class="foot_msg">
+					<span>2017-06-06</span>
+				</div>
+				<div class="footer">
+					<p class="footer_l"><span class="numpeople">10</span>人看过</p>
+					<p class="footer_r"><span class="numpeople">1</span>人评论</p>
+					<p class="footer_r"><span class="numpeople">1</span>人报名</p>
+				</div>
+				<div class="grade">
+					<span>8.0</span>
+				</div>
+			</li>
+		</ol>
+	</div>
+	<div id="list">
+		<div class="place"></div>
+		<a href="">我的发拼</a>
+		<div id="line"></div>
+		<a href="">我的订单</a>
+	</div>
+</div>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+	var tit=document.getElementById('tit');
+	var h1s=tit.getElementsByTagName('h1');
+	var content=document.getElementById('content');
+	var ols=content.getElementsByTagName('ol');
+	var preIndex=0;
+	for (var i = 0; i < h1s.length; i++) {
+		h1s[i].index=i;
+		h1s[i].onclick=function (){
+			h1s[preIndex].className='';
+			ols[preIndex].className='';
+			this.className='active';
+			ols[this.index].className='show';
+			preIndex=this.index;
+		};			
+	};
+	var addlist=document.getElementById('add');
+	var list=document.getElementById('list');
+	var wrap=document.getElementById('wrap');
+	// add.onclick=function (){
+	// 	list.style.display='block';
+	// 	alert(1)
+	// }
+	document.addEventListener('touchstart',pointshow,false)
+	function pointshow(ev){
+		var e=ev||window.event;
+		var targ=e.target||e.srcElement;
+		if(targ.id=='add'){
+			list.style.display='block';
+			// alert(1);
+		}
+		// if(targ.nodeName=='SPAN'&&targ.parentNode.id='list'){
+
+		// }
+		if(targ.id!='list'&&targ.id!='add'){
+			console.log(1);
+			list.style.display='none';
+		}
+
+	}
+	//设置两个点击事件，怎么设置互不影响
+</script>
+</body>
+</html>

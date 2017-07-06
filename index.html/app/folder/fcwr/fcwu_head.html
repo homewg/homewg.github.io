@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/矩形@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0.52rem 0 0.2rem;
+	}
+	header span{
+		float: left;
+		width: 2.5rem;
+		height: 0.88rem;
+		text-align: center;
+		line-height: 0.88rem;
+		margin: 0rem 1.5rem;
+		font-size: 0.34rem;
+		color: #fff;
+	}
+	header img:last-child{
+		width: 0.51rem;
+		height: 0.51rem;
+		float: left;
+		margin: 0.11rem 0rem 0 0.31rem;
+	}
+	#content{
+		width: 7.5rem;
+		background-color: rgb(240,239,237);
+		overflow: hidden;
+	}
+	.tit_head{
+		width: 7.5rem;
+		height: 2.4rem;
+		background: url(images/tit_head_tupian.jpg);
+		background-size: 100% 100%;
+	}
+	#content li{
+		width: 7.5rem;
+		height: 3.58rem;
+		background-color: #fff;
+		margin-bottom: 0.12rem;
+		overflow: hidden;
+	}
+	.tit_photo{
+		height: 0.92rem;
+		background-color: #ccc;
+		float: left;
+	}
+	.tit_easy{
+		float: left;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回2x.png" alt="定位图片">
+		<span>越人分享</span>
+		<img src="images/help.png" alt="定位图片">
+	</header>
+	<div id="content">
+		<div class="tit_head"></div>
+		<li>
+			<div class="tit_photo"></div>
+			<div class="tit_easy"></div>
+			<div class="tit_right">
+				<img src="" alt="">
+				<span></span>
+				<span></span>
+			</div>
+
+		</li>
+		<li>
+			
+		</li>
+		<li>
+			
+		</li>
+	</div>
+</div>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+</script>
+</body>
+</html>

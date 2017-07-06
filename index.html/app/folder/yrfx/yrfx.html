@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/标题框@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0.52rem 0 0.2rem;
+	}
+	header span{
+		float: left;
+		width: 2.5rem;
+		height: 0.88rem;
+		text-align: center;
+		line-height: 0.88rem;
+		margin: 0rem 1.5rem;
+		font-size: 0.34rem;
+		color: #fff;
+	}
+	header img:last-child{
+		width: 0.51rem;
+		height: 0.51rem;
+		float: left;
+		margin: 0.11rem 0rem 0 0.31rem;
+	}
+	#content{
+		width: 7.5rem;
+		background: url(images/图层-0@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		overflow: hidden;
+	}
+	nav{
+		background-color: #fff;
+		width: 7.49rem;
+		height: 0.64rem;
+		overflow: hidden;
+	}
+	nav h1{
+		float: left;
+		width: 3.73rem;
+		height: 0.64rem;
+		font-size: 0.34rem;
+		color: #000;
+		text-align: center;
+		line-height: 0.64rem;
+	}
+	nav div{
+		float: left;
+		width: 0.02rem;
+		height: 0.5rem;
+		margin-top: 0.07rem;
+		background-color: rgb(240,239,237);
+	}
+	.active{
+		color: rgb(159,238,214);
+	}
+	#share_cons{
+		width: 7.49rem;
+	}
+	#share_cons li{
+		float: left;
+		display: none;
+		overflow: hidden;
+	}
+	#share_cons .show{
+		display: block;
+	}
+	.share_peo{
+		float: left;
+		width: 7.49rem;
+		height: 4.26rem;
+		background-color: #fff;
+		margin-top: 0.12rem;
+		overflow: hidden;
+	}
+	.share_head{
+		width: 2.5rem;
+		height: 0.89rem;
+		float: left;
+	}
+	.share_head_pto{
+		float: left;
+		width: 0.77rem;
+		height: 0.88rem;
+		-webkit-mask-image: radial-gradient(circle at center center,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0) 50%);
+		-webkit-mask-position: 0.08rem 0;
+		-webkit-mask-repeat: no-repeat;
+	}
+	.share_head span{
+		display: block;
+		margin-top: 0.13rem;
+		font-size: 0.22rem;
+		color: #000;
+		padding-left: 0.02rem;
+	}
+	.share_head span img{
+		width: 0.12rem;
+		height: 0.17rem;
+		margin-right: 0.08rem;
+	}
+	.share_head time{
+		display: block;
+		font-size: 0.18rem;
+		color: rgb(124,124,124);
+		margin-left: 0.98rem;
+	}
+	.share_peo p{
+		float: left;
+		height: 1.16rem;
+		font-size: 0.24rem;
+		color: #000;
+		line-height: 0.39rem;
+		margin-left: 0.2rem;
+		margin-right: 0.28rem;
+	}
+	.share_img{
+		margin-left: 0.04rem;
+	}
+	.share_img img{
+		margin-left: 0.16rem;
+		width: 1.8rem;
+		height: 1.8rem;
+	}
+	.share_like{
+		float: right;
+		margin-top: 0.07rem;
+		margin-right: 0.18rem;
+		height: 0.24rem;
+		width: 1.5rem;
+	}
+	.share_like img{
+		width: 0.24rem;
+		height: 0.24rem;
+		margin-left: 0.26rem;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回2x.png" alt="定位图片">
+		<span>越人分享</span>
+		<img src="images/help.png" alt="定位图片">
+	</header>
+	<div id="content">
+		<nav>
+			<h1 class="active">粤人分享</h1>
+			<div></div>
+			<h1>我的分享</h1>
+		</nav>
+		<ol id="share_cons">
+			<li class="show">
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+				<div class="share_peo">
+					<div class="share_head">
+						<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+						<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+						<time>1小时以前</time>
+					</div>
+					<p>同学永远是我们一生中的特殊群体，他比亲人多了些熟知，比朋友多了些亲切。感谢同学，给了我那段不寻常的记忆，感谢生活，给了我那段难忘的经历。</p>
+					<div class="share_img">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+						<img src="images/timg@2x.png" alt="">
+					</div>
+					<div class="share_like">
+						<img src="images/图层-1-拷贝-2@2x.png" alt="">
+						<img src="images/图层拷贝.png" alt="">
+						<img src="images/图层-1@2x.png" alt="">
+					</div>
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+	var content=document.getElementById('content');
+	var share_cons=document.getElementById('share_cons');
+	var h1s=content.getElementsByTagName('h1');
+	var lis=share_cons.getElementsByTagName('li');
+	var preIndex=0;
+	for (var i = 0; i < h1s.length; i++) {
+		h1s[i].index=i;
+		h1s[i].onclick=function (){
+			h1s[preIndex].className='';
+			lis[preIndex].className='';
+			this.className='active';
+			lis[this.index].className='show';
+			preIndex=this.index;
+		};
+	};
+</script>
+</body>
+</html>

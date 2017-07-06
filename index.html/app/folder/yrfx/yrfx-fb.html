@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+		height: 12.09rem;
+		background-color: #f0efed;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/标题框@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0.52rem 0 0.2rem;
+	}
+	header span{
+		float: left;
+		width: 2.5rem;
+		height: 0.88rem;
+		text-align: center;
+		line-height: 0.88rem;
+		margin: 0rem 1.5rem;
+		font-size: 0.34rem;
+		color: #fff;
+	}
+	#content{
+		width: 7.5rem;
+		overflow: hidden;
+	}
+	#text{
+		float: left;
+		width: 7.5rem;
+		height: 2.45rem;
+		box-sizing: border-box;
+		padding: 0.1rem 0.2rem;
+		text-align: justify;
+		color: rgb(193,193,193);
+		border: 0;
+		outline: none;
+	}
+	.cons_file{
+		width: 7.49rem;
+		overflow: hidden;
+		background-color: #fff;
+		padding-bottom: 0.34rem;
+		margin-bottom: 0.2rem;
+		float: left;
+	}
+	.file{
+		float: left;
+		width: 1.86rem;
+		height: 1.86rem;
+		background-color: rgb(247,247,247);
+		margin-left: 0.22rem;
+	}
+	.file img{
+		width: 0.65rem;
+		height: 0.56rem;
+		margin: 0.48rem 0.48rem 0 0.61rem ;
+	}
+	.file span{
+		display: block;
+		text-align: center;
+		font-size: 0.24rem;
+		color: rgb(207,207,207);
+		margin-top: 0.16rem;
+	}
+	.note{
+		float: left;
+		color: rgb(207,207,207);
+		font-size: 0.2rem;
+		margin: 1.54rem 0 0 0.35rem;
+	}
+	.place{
+		float: left;
+		height: 0.78rem;
+		width: 7.5rem;
+		background-color: #fff;
+		overflow: hidden;
+	}
+	.place span{
+		line-height: 0.78rem;
+		font-size: 0.28rem;
+		color: rgb(121,121,121);
+		margin: 0.24rem 0.22rem;
+	}
+	#content a{
+		float: left;
+		display: block;
+		width: 2.4rem;
+		height: 0.68rem;
+		margin: 0.9rem 2.62rem;
+		background: url(images/圆角矩形@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		font-size: 0.36rem;
+		color: #fff;
+		text-align: center;
+		line-height: 0.68rem;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回2x.png" alt="定位图片">
+		<span>越人分享</span>
+	</header>
+	<div id="content">
+		<textarea name="" id="text" >说点什么吧……</textarea>
+		<div class="cons_file">
+			<div class="file">
+				<img src="images/图层photo.png" alt="">
+				<span>照片/视频</span>
+			</div>
+			<span class="note">（最多添加9张图片）</span>
+		</div>
+		<div class="place">
+			<span>地点</span>
+			<img src="" alt="">
+		</div>
+		<a href="#">发布</a>
+	</div>
+</div>
+<script>
+	//适配
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+	//tab切换
+	// var content=document.getElementById('content');
+	// var share_cons=document.getElementById('share_cons');
+	// var h1s=content.getElementsByTagName('h1');
+	// var lis=share_cons.getElementsByTagName('li');
+	// var preIndex=0;
+	// for (var i = 0; i < h1s.length; i++) {
+	// 	h1s[i].index=i;
+	// 	h1s[i].onclick=function (){
+	// 		h1s[preIndex].className='';
+	// 		lis[preIndex].className='';
+	// 		this.className='active';
+	// 		lis[this.index].className='show';
+	// 		preIndex=this.index;
+	// 	};
+	// };
+</script>
+</body>
+</html>
