@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+*{margin: 0; padding: 0; }
+html{
+	font-size: 100px;
+}
+body{
+	font-size: 0px;
+}
+#wrap{
+	position: relative;
+	width: 6.4rem;
+	background: url(images/bg01.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+header{
+	width: 6.4rem;
+	height: 0.84rem;
+	text-align: center;
+	line-height: 0.84rem;
+	font-size: 0.38rem;
+	color: rgb(1,53,148);
+}
+#award{
+	width: 5.94rem;
+	height: 4.78rem;
+	margin: 0 auto;
+	background-color: #fff;
+}
+#award h1{
+	font-size: 0.25rem;
+	color: rgb(168,168,168);
+	text-align: center;
+	margin: 0.17rem auto 0.21rem;
+}
+#award span{
+	display: block;
+	width: 4.18rem;
+	height: 0.75rem;
+	margin: 0 auto;
+	background: url(images/bg03.jpg) 0 0 no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.23rem;
+	line-height: 0.75rem;
+	color: #fff;
+	letter-spacing: 0.65rem;
+	box-sizing: border-box;
+	padding-left: 0.45rem;
+}
+#award img{
+	display: block;
+	width: 4.85rem;
+	height: 2.94rem;
+	margin: 0.43rem auto;
+}
+#footer{
+	position: relative;
+}
+#footer h2{
+	font-size: 0.3rem;
+	margin: 0.2rem 0 0.16rem 0.47rem;
+	color: rgb(0,46,143);
+}
+#footer span{
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	display: block;
+	width: 5.55rem;
+	margin: 0 auto;
+	color: rgb(164,161,159);
+}
+#khj{
+	background: url(images/btn01.png) 0 0 no-repeat;
+	width: 4.33rem;
+	height: 0.97rem;
+	font-size: 0.4rem;
+	color: white;
+	display: block;
+	text-align: center;
+	line-height: 0.97rem;
+	margin: 0.22rem auto 0.27rem;
+	letter-spacing: 0.03rem;
+	text-decoration: none;
+	background-size: 100% 100%;
+}
+#share{
+	font-size: 0.3rem;
+	color: rgb(164,161,159);
+	display: block;
+	width: 5rem;
+	height: 1.67rem;
+}
+#box{
+	position: absolute;
+	left: 2.8rem;
+	top: 2.5rem;
+	width: 2.5rem;;
+	height: 0.69rem;
+}
+#box img{
+	width: 0.67rem;
+	height: 0.67rem;
+	margin-right: 0.15rem;
+}
+#mask{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 6.4rem;
+	height: 100%;
+	background-color: #ccc;
+	opacity: 0.8;
+}
+#mask p{
+	width: 6.4rem;
+	height:4.05rem;
+	background: url(images/share_pop.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header><strong>恭喜您，启辰车模已经属于您了!</strong></header>
+	<div id="award">
+		<h1>请保持在本页面，凭页面代码到展台领取礼品</h1>
+		<span>QC001</span>
+		<img src="images/qc_07.jpg" alt="奖品车模">
+	</div>
+	<div id="footer">
+		<h2><strong>不够过瘾？</strong></h2>
+		<span>那么请留下您的联系方式，就有机会抽取启辰R30、启辰晨风一年使用权大奖！</span>
+		<p id="khj" href="07.html">启辰开回家</p>
+		<span id="share">
+			分享好友积攒人品：
+		</span>
+		<div id="box">
+			<a href=""><img src="images/weixin.png" alt=""></a>
+			<a href=""><img src="images/xlwb.png" alt=""></a>
+			<a href=""><img src="images/txwb.png" alt=""></a>
+		</div>
+	</div>
+	<div id="mask">
+		<p></p>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale = deviceWidth/640;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	}
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+	var khj=document.getElementById('khj');
+	var mask=document.getElementById('mask');
+	khj.onclick=function (){
+		mask.style.display="block";
+	}
+</script>
+</body>
+</html>
