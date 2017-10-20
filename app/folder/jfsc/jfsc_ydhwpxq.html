@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family: "微软雅黑","宋体",Arail,Tabhoma; font-size: 14px; text-align: left;}
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+		background-color: #f0efed;
+		position: relative;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/ydh_tit_head.jpg) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0.52rem 0 0.2rem;
+	}
+	header span{
+		float: left;
+		width: 2.5rem;
+		height: 0.88rem;
+		text-align: center;
+		line-height: 0.88rem;
+		margin: 0rem 1.5rem;
+		font-size: 0.34rem;
+		color: #fff;
+	}
+	#content{
+		width: 7.5rem;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.content_tit{
+		width: 7.5rem;
+		height: 2.65rem;
+		background-color: #fff;
+		position: relative;
+	}
+	.content_tit_show{
+		float: right;
+		width: 3.15rem;
+		height: 3.02rem;
+		margin-right: 0.5rem;
+		margin-top: -0.4rem;
+	}
+	.content_tit_bg{
+		width: 7.5rem;
+		height: 1.82rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	.content_tit_discription{
+		font-size: 0.3rem;
+		color: rgb(239,239,239);
+		position: absolute;
+		left: 0.25rem;
+		bottom: 0.16rem;
+	}
+	#content h1{
+		margin-top: 0.32rem;
+		margin-left: 0.31rem;
+		margin-bottom: 0.4rem;
+		font-size: 0.24rem;
+		color: #000;
+	}
+	#content p{
+		font-size: 0.24rem;
+		line-height: 0.39rem;
+		text-align: justify;
+		margin: 0 0.3rem;
+		color: #000;
+	}
+	.sample_display{
+		display: block;
+		width: 3.05rem;
+		height: 3.05rem;
+		margin: 0.5rem auto;
+	}
+	#content h2{
+		margin-top: 0.32rem;
+		margin-left: 0.31rem;
+		margin-bottom: 0.37rem;
+		font-size: 0.24rem;
+		color: #000;
+	}
+	#content .ruler{
+		display: block;
+		margin-left: 0.31rem;
+		margin-bottom: 0.15rem;
+		font-size: 0.24rem;
+		color: #000;
+	}
+	#expenditure{
+		height: 0.99rem;
+		border-top: 0.01rem solid rgb(181,181,181);
+		margin-left: 0.03rem;
+		overflow: hidden;
+	}
+	#expenditure span{
+		float: right;
+		font-size: 0.3rem;
+		color: #000;
+		margin-top: 0.34rem;
+		margin-right: 0.19rem;
+	}
+	#mask{
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 7.5rem;
+		height: 12.09rem;
+		opacity: 0.5;
+		background-color: #ccc;
+		z-index: 10;
+	}
+	#success{
+		display: none;
+		position: absolute;
+		left: 1.05rem;
+		top: 3.22rem;
+		width: 5.4rem;
+		height: 4.2rem;
+		border-radius: 0.1rem;
+		background-color: #ecece7;
+		z-index: 20;
+	}
+	#succes_pto{
+		display: block;
+		width: 1.7rem;
+		height: 1.7rem;
+		margin: 0.82rem auto 0.48rem;
+	}
+	#succes_upload{
+		display: block;
+		text-align: center;
+		font-size: 0.2rem;
+		color: rgb(94,94,94);
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回2x.png" alt="定位图片">
+		<span>已兑换物品详情</span>
+	</header>
+	<div id="content">
+		<div class="content_tit">
+			<img src="images/img_2_@2x.png" alt="抱枕展示" class="content_tit_show">
+			<img src="images/img_4_@2x.png" alt="蒙版虚化" class="content_tit_bg">
+			<span class="content_tit_discription">亚麻双色抱枕</span>
+		</div>
+		<h1>商品简介：</h1>
+		<p>清新雅致的一款抱枕，质感厚重，颜色稳重大气，是居家搭配的很 好选择，让家有些改变，我们从抱枕开始！我们用心选择，只为提 供更好的产品。</p>
+		<img src="images/img_3.png" alt="" class="sample_display">
+		<h2>注意事项：</h2>
+		<span class="ruler">1.已经兑换，不能退货和返还积分</span>
+		<span class="ruler">2.以实物为准</span>
+		<footer>
+			<div id="expenditure">
+				<span class="money" style="color:rgb(255,162,100);">6000积分</span>
+				<span>兑换花费</span>
+			</div>
+			
+		</footer>
+	</div>
+	<div id="mask"></div>
+	<div id="success">
+		<img src="" alt="" id="succes_pto">
+		<span id="succes_upload">已发布成功！</span>
+	</div>
+</div>
+<script>
+	// var wron;
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+
+
+	//
+	var mask = document.getElementById("mask");
+	var success = document.getElementById("success");
+	var content = document.getElementById("content");	
+	document.onclick=function (ev){
+		var e = ev||window.event;
+		var targ = e.target||e.srcElement;
+		if(targ.id == 'con_upload'&&targ.parentNode.id =='content'){
+			mask.style.display="block";
+			success.style.display="block";
+			alert(1);
+		}
+		if(targ.id == 'success'||targ.id == 'mask'){
+			alert(2);
+			mask.style.display="none";
+			success.style.display="none";
+		}
+	}
+</script>
+</body>
+</html>

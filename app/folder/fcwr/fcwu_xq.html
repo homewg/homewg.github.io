@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0; list-style: none;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/矩形@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0 0 0.2rem;
+	}
+	header span{
+		font-size: 0.35rem;
+		color: #fff;
+		position: absolute;
+		left: 3.09rem;
+		top: 0.20rem;
+	}
+	header img:last-child{
+		width: 0.35rem;
+		height: 0.35rem;
+		float: right;
+		margin: 0.25rem 0.2rem 0 0.2rem;
+	}
+	#tit .active{
+		color: rgb(248,195,210);
+	}
+	/* 内容部分 */
+	#content{
+		background-color: rgb(240,239,237);
+		position: relative;
+	}
+	.cons::after{
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+	/* 头像 */
+	#share_cons{
+		width: 7.49rem;
+	}
+	#share_cons li{
+		float: left;
+		display: none;
+		overflow: hidden;
+	}
+	#share_cons .show{
+		display: block;
+	}
+	.share_peo{
+		float: left;
+		width: 7.49rem;
+		background-color: #fff;
+		overflow: hidden;
+		margin-bottom: 0.11rem;
+	}
+	.share_head{
+		width: 7.49rem;
+		float: left;
+	}
+	.share_head_pto{
+		float: left;
+		width: 1.29rem;
+		height: 1.46rem;
+		-webkit-mask-image: radial-gradient(circle at center center,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0) 50%);
+		-webkit-mask-position: 0.08rem 0;
+		-webkit-mask-repeat: no-repeat;
+	}
+	.share_head span{
+		display: block;
+		margin-top: 0.31rem;
+		font-size: 0.22rem;
+		color: #000;
+		padding-left: 0.9rem;
+	}
+	.share_head span img{
+		width: 0.12rem;
+		height: 0.17rem;
+		margin-right: 0.08rem;
+	}
+	.share_head time{
+		display: block;
+		margin-top: 0.17rem;
+		font-size: 0.18rem;
+		color: rgb(124,124,124);
+		margin-left: 1.1rem;
+	}
+	#attention{
+		position: absolute;
+		top: 0.3rem;
+		right:0.2rem;
+		display: block;
+		width: 1.15rem;
+		height: 0.51rem;
+		box-sizing: border-box;
+		border-radius: 0.1rem;
+		border: 0.03rem solid rgb(231,210,236);
+		color: rgb(231,210,236);
+		font-size: 0.26rem;
+		line-height: 0.45rem;
+		text-align: center;
+	}
+	.share_peo p{
+		clear: left;
+		float: left;
+		width: 4.7rem;
+		height: 1.16rem;
+		font-size: 0.22rem;
+		color: #000;
+		line-height: 0.39rem;
+		margin-left: 0.21rem;
+		margin-right: 0.28rem;
+	}
+	.share_peo h2{
+		float: left;
+		height: 0.62rem;
+		margin-left: 0.21rem;
+		font-size: 0.24rem;
+	}
+	
+	.share_img img{
+		float: left;
+		display: block;
+		margin-top: 0rem;
+		margin-left: 0.16rem;
+		margin-bottom: 0.15rem;
+		width: 7.13rem;
+		height: 4.23rem;
+	}
+	.share_like{
+		float: right;
+		margin-right: 0.18rem;
+		height: 0.24rem;
+		width: 1.1rem;
+		padding-bottom: 0.17rem;
+	}
+	.share_like img{
+		width: 0.24rem;
+		height: 0.24rem;
+		margin-left: 0.26rem;
+	}
+	.show{
+		width: 7.49rem;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.show_tit{
+		overflow: hidden;
+	}
+	.show_tit h2{
+		float: left;
+		width: 2.48rem;
+		height: 0.64rem;
+		font-size: 0.24rem;
+		text-align: center;
+		line-height: 0.64rem;
+	}
+	.show_tit div{
+		float: left;
+		width: 0.02rem;
+		height: 0.36rem;
+		margin-top: 0.12rem;
+		background-color: rgb(240,239,237);
+	}
+	.show_tit_play{
+		color: rgb(248,195,210);
+	}
+	/* 个人简介 */
+	.conshow{
+		width: 7.49rem;
+		height: 2.42rem;
+		border-top: 0.01rem solid rgb(240,239,237);
+		background-color: #fff;
+	}
+	.conshow_cons{
+		width: 7.49rem;
+		background-color: #fff;
+		position: relative;
+		margin-bottom: 0.2rem;
+		overflow: hidden;
+	}
+	.conshow_cons_head{
+		overflow: hidden;
+		width: 1.8rem;
+		height: 1.8rem;
+		float: left;
+	}
+	.conshow_portrait{
+		position: absolute;
+		left: 0.5rem;
+		top: 0.24rem;
+		width: 1.07rem;
+		height: 1.07rem;
+		border-radius: 1rem;
+		background: url(images/timg.png) center center no-repeat;
+		background-size: 100% 100%;
+	}
+	.conshow_msg{
+		overflow: hidden;
+		width: 5.42rem;
+		height: 1.57rem;
+		float: left;
+		border-bottom: 0.01rem solid rgb(240,239,237);
+	}
+	.conshow_msg img{
+		width: 0.14rem;
+		height: 0.24rem;
+		margin-left: 0.09rem;
+	}
+	.conshow_msg div{
+		font-size: 0.24rem;
+		height: 0.7rem;
+		line-height: 0.75rem;
+		color: rgb(84,84,84);
+	}
+	.conshow_msg span{
+		color: #000;
+		height: 0.55rem;
+		font-size: 0.24rem;
+		display:inline-block;
+		padding-left: 0.22rem;
+	}
+	.conshow_msg time{
+		height: 0.21rem;
+		display: inline-block;
+		font-size: 0.14rem;
+		color: rgb(84,84,84);
+		margin-left: 0.2rem;
+		margin-top: -0.1rem;
+	}
+	.pinglun{
+		position: absolute;
+		right: 0.25rem;
+		top: 1.17rem;
+		height: 0.42rem;
+	}
+	.pinglun div{
+		width: 1rem;
+	}
+	/* 点赞位置 */
+	.like img,.talk img{
+		width: 0.24rem;
+		height: 0.24rem;
+		margin-left: 0.26rem;
+		float: left;
+	}
+	.last{
+		height: 0.88rem;
+		overflow: hidden;
+	}
+	/* 打赏 */
+	#foot_talk{
+		float: left;
+		width: 6.25rem;
+		height: 0.5rem;
+		box-sizing: border-box;
+		font-size: 0.2rem;
+		background-color: #fff;
+		margin: 0.2rem 0.31rem;
+		border: 0;
+		outline: none;
+		border-radius: 0.1rem;
+	} 
+	#reward{
+		float: left;
+		width: 0.32rem;
+		height: 0.42rem;
+		margin-top: 0.25rem;
+	}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回@2x.png" alt="定位图片">
+		<span>详情</span>
+	</header>
+	<nav id='tit'>
+	</nav>
+	<div id="content">
+		<li class="cons">
+			<div class="share_peo">
+				<div class="share_head">
+					<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+					<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+					<time>1小时以前</time>
+					<div id="attention">关注TA</div>
+				</div>
+				<h2>找女朋友</h2>
+				<p>本人24，身高180，找个老师孝顺父母的女孩，有的可以私聊我，非诚勿扰</p>
+				<div class="share_img">
+					<img src="images/photo.jpg" alt="">
+				</div>
+				<div class="share_like">
+					<img src="images/图层-1-拷贝@2x.png" alt="">
+					<img src="images/图层-2-拷贝@2x.png" alt="">
+				</div>
+			</div>
+		</li>
+		<div class="show">
+			<nav class="show_tit">
+				<h2  class="show_tit_play">评论(<span class="number">1</span>)</h2>
+				<div></div>
+				<h2>点赞(<span class="number">1</span>)</h2>
+				<div></div>
+				<h2>打赏(<span class="number">1</span>)</h2>
+			</nav>
+			<div class="conshow">
+				<li class="conshow_cons">
+					<div class="conshow_cons_head">
+						<div class="conshow_portrait">
+							<!-- <img src="images/timg-(16)-拷贝@2x.png" alt="头像" class="conshow_portrait_photo"> -->
+						</div>
+					</div>
+					<div class="conshow_msg">
+						<div><span>做个坚强的小公主</span><img src="images/img♂@2x.png" alt="性别标志"></div>
+						<span>我就喜欢看这个</span><br>
+						<time>1楼1小时前</time>
+					</div>
+					<div class="pinglun">
+						<div class="like"><img src="images/图层-1-拷贝@2x.png" alt=""></div>
+						<div class="talk"><img src="images/图层-2-拷贝@2x.png" alt=""></div>
+					</div>
+				</li>
+			</div>
+		</div>
+		<div class="last">
+			<input id="foot_talk" type="text" name="" value="" placeholder="发表评论">
+			<img id="reward" src="images/图层-3@2x.png" alt="打赏图标">
+		</div>
+		
+	</div>
+</div>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+	var tit=document.getElementById('tit');
+	var h1s=tit.getElementsByTagName('h1');
+	var content=document.getElementById('content');
+	var ols=content.getElementsByTagName('ol');
+	var preIndex=0;
+	for (var i = 0; i < h1s.length; i++) {
+		h1s[i].index=i;
+		h1s[i].onclick=function (){
+			h1s[preIndex].className='';
+			ols[preIndex].className='';
+			this.className='active';
+			ols[this.index].className='show';
+			preIndex=this.index;
+		};			
+	};
+</script>
+</body>
+</html>

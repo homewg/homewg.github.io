@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0;}
+	html{
+		font-size: 100px;
+	}
+	body{
+		font-size: 0px;
+		font-family: '微软雅黑';
+	}
+	#wrap{
+		width: 7.5rem;
+	}
+	header{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background: url(images/矩形@2x.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	header img:first-child{
+		width: 0.28rem;
+		height: 0.38rem;
+		float: left;
+		margin: 0.25rem 0.52rem 0 0.2rem;
+	}
+	header span{
+		float: left;
+		width: 2.5rem;
+		height: 0.88rem;
+		text-align: center;
+		line-height: 0.88rem;
+		margin: 0rem 1.5rem;
+		font-size: 0.34rem;
+		color: #fff;
+	}
+	header img:last-child{
+		width: 0.51rem;
+		height: 0.51rem;
+		float: left;
+		margin: 0.11rem 0rem 0 0.31rem;
+	}
+	#content{
+		width: 7.5rem;
+		background-color: rgb(240,239,237);
+		overflow: hidden;
+	}
+	.tit_head{
+		width: 7.5rem;
+		height: 2.4rem;
+		background: url(images/tit_head_tupian.jpg);
+		background-size: 100% 100%;
+	}
+	#content li{
+		width: 7.5rem;
+		background-color: #fff;
+		margin-bottom: 0.12rem;
+		overflow: hidden;
+	}
+	#content{
+		background-color: rgb(240,239,237);
+		position: relative;
+	}
+	.cons::after{
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+	}
+	/* 头像 */
+	#share_cons{
+		width: 7.49rem;
+	}
+	#share_cons li{
+		float: left;
+		display: none;
+		overflow: hidden;
+	}
+	#share_cons .show{
+		display: block;
+	}
+	.share_peo{
+		float: left;
+		width: 7.49rem;
+		background-color: #fff;
+		overflow: hidden;
+		margin-bottom: 0.11rem;
+		position: relative;
+	}
+	.share_head{
+		width: 7.49rem;
+		height: 1.27rem;
+		float: left;
+	}
+	.share_head_pto{
+		float: left;
+		width: 1.29rem;
+		height: 1.27rem;
+		-webkit-mask-image: radial-gradient(circle at center center,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0) 50%);
+		-webkit-mask-position: 0.08rem 0;
+		-webkit-mask-repeat: no-repeat;
+	}
+	.share_head span{
+		display: block;
+		margin-top: 0.31rem;
+		font-size: 0.22rem;
+		color: #000;
+		padding-left: 0.9rem;
+	}
+	.share_head span img{
+		width: 0.12rem;
+		height: 0.17rem;
+		margin-right: 0.08rem;
+	}
+	.share_head time{
+		display: block;
+		margin-top: 0.17rem;
+		font-size: 0.18rem;
+		color: rgb(124,124,124);
+		margin-left: 1.1rem;
+	}
+	#attention{
+		position: absolute;
+		top: 0.3rem;
+		right:0.2rem;
+		display: block;
+		width: 1.15rem;
+		height: 0.51rem;
+		box-sizing: border-box;
+		border-radius: 0.1rem;
+		border: 0.03rem solid rgb(142,235,208);
+		color: rgb(142,235,208);
+		font-size: 0.26rem;
+		line-height: 0.45rem;
+		text-align: center;
+	}
+	
+	.share_peo p{
+		clear: left;
+		float: left;
+		width: 4.7rem;
+		height: 1.16rem;
+		font-size: 0.22rem;
+		color: #000;
+		line-height: 0.39rem;
+		margin-left: 0.21rem;
+		margin-right: 0.28rem;
+	}
+	.share_peo h2{
+		float: left;
+		height: 0.62rem;
+		margin-left: 0.21rem;
+		font-size: 0.24rem;
+	}
+	.share_img{
+		position: absolute;
+		right: 0.2rem;
+		top: 0.95rem;
+		width: 1.94rem;
+		height: 1.94rem;
+		background-color: #ccc;
+	}
+	.share_img img{
+		width: 1.94rem;
+		height: 1.94rem;
+	}
+	.share_like{
+		float: right;
+		margin-right: 0.1rem;
+		height: 0.24rem;
+		width: 1.25rem;
+		padding-bottom: 0.17rem;
+		margin-top: 1.3rem;
+	}
+	.share_like img{
+		width: 0.24rem;
+		height: 0.24rem;
+		margin-left: 0.26rem;
+	}
+
+
+</style>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img src="images/返回2x.png" alt="定位图片">
+		<span>非诚勿扰</span>
+		<img src="images/help.png" alt="定位图片">
+	</header>
+	<div id="content">
+		<div class="tit_head"></div>
+		<div class="share_peo">
+			<div class="share_head">
+				<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+				<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+				<time>1小时以前</time>
+			</div>
+			<h2>找女朋友</h2>
+			<p>本人24，身高180，找个老师孝顺父母的女孩，有的可以私聊我，非诚勿扰</p>
+			<div class="share_img">
+				<img src="images/timg-(16)-拷贝@2x.png" alt="">
+			</div>
+			<div class="share_like">
+				<img src="images/图层-1-拷贝@2x.png" alt="">
+				<img src="images/图层-1-拷贝@2x.png" alt="">
+			</div>
+		</div>
+		<div class="share_peo">
+			<div class="share_head">
+				<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+				<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+				<time>1小时以前</time>
+			</div>
+			<h2>找女朋友</h2>
+			<p>本人24，身高180，找个老师孝顺父母的女孩，有的可以私聊我，非诚勿扰</p>
+			<div class="share_img">
+				<img src="images/timg-(16)-拷贝@2x.png" alt="">
+			</div>
+			<div class="share_like">
+				<img src="images/图层-1-拷贝@2x.png" alt="">
+				<img src="images/图层-2-拷贝@2x.png" alt="">
+			</div>
+		</div>
+		<div class="share_peo">
+			<div class="share_head">
+				<img class="share_head_pto" src="images/timg@2x.png" alt="头像">
+				<span><img src="images/img♂@2x.png" alt="">三生三世</span>
+				<time>1小时以前</time>
+			</div>
+			<h2>找女朋友</h2>
+			<p>本人24，身高180，找个老师孝顺父母的女孩，有的可以私聊我，非诚勿扰</p>
+			<div class="share_img">
+				<img src="images/timg-(16)-拷贝@2x.png" alt="">
+			</div>
+			<div class="share_like">
+				<img src="images/图层-1-拷贝@2x.png" alt="">
+				<img src="images/图层-2-拷贝@2x.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function resetWidth(){
+		var deviceWidth=document.documentElement.clientWidth;
+		var scale=deviceWidth/750;
+		var html=document.getElementsByTagName('html')[0];
+		html.style.fontSize=100*scale+'px';
+	};
+	resetWidth();
+	window.onresize=function (){
+		resetWidth();
+	};
+</script>
+</body>
+</html>
